@@ -9,8 +9,6 @@ from pytest_django.asserts import assertRedirects, assertFormError
 
 from notes.forms import WARNING
 
-from pytils.translit import slugify
-
 from http import HTTPStatus
 
 
