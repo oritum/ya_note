@@ -7,14 +7,6 @@ from django.urls import reverse
 from pytest_django.asserts import assertRedirects
 
 
-# Указываем в фикстурах встроенный клиент.
-def test_home_availability_for_anonymous_user(client):
-    # Адрес страницы получаем через reverse():
-    url = reverse('notes:home')
-    response = client.get(url)
-    assert response.status_code == HTTPStatus.OK
-
-
 @pytest.mark.parametrize(
     'name',  # Имя параметра функции.
     # Значения, которые будут передаваться в name.
